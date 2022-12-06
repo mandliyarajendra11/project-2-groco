@@ -1,0 +1,225 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+text-decoration: none;
+border: none;
+outline: none;
+text-transform: capitalize;
+transition: all .2s linear;
+}
+:root{
+    --orange:#ff7800;
+    --light-green:#54ff05;
+    --black:#130f40;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow:0.5rem 1.5rem rgba(0,0,0,.1);
+--outline:.1rem solid rgba(0,0,0,.1);
+--outline-hover:.2rem solid var(--black);
+}
+html{
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+overflow-x: hidden;
+scroll-behavior: smooth;
+scroll-padding-top:7rem;
+
+}
+.header{
+    width: 100vw;
+    align-items: center;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--border);
+position: fixed;
+z-index: 999;
+top:0;left: 0;
+display: flex;
+flex-direction:row;
+text-align: center;
+justify-content: space-around;
+padding: 2rem 7% 1rem 7%;
+}
+.header h1{
+    font-size: 2.5rem;
+    color: var(--black);
+font-weight: bolder;
+}
+.header .navbar a{
+    font-size: 1.5rem;
+color: var(--light-color);
+margin: 0 1rem;
+}
+.navbar a:hover{
+    color: var(--light-green);
+}
+.btn{
+    padding: .8rem;
+    border-radius: .5rem;
+background: #eee;
+}
+.btn:hover{
+    background: var(--orange);
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../image/banner-bg.webp) no-repeat;    
+    background-position: center;
+    background-size: cover;
+     padding-top: 17rem;
+     padding-bottom: 10rem; 
+   
+}
+.banner h1{
+    color: var(--black);
+    font-size: 3rem;
+}
+.banner div{
+    text-align: center;
+    width: 65rem;
+    line-height: 4rem;
+   }
+.banner h1 span{
+    color: var(--orange);
+ }
+.banner .btn{
+    padding: .8rem 2rem;
+    background: none;
+    border: 1px solid var(--black);
+}
+.banner p{
+    font-size: 1.3rem;
+    color: var(--light-color);
+}
+.banner .btn:hover{
+background:var(--orange);
+color: #eee;
+}
+.features{
+    padding: 3rem 0;
+    background: #eee;
+}
+.features h1{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+}
+.features h1 span{
+    background: var(--orange);
+    color: #eee;
+    padding: 0.5rem 3rem;
+    display: inline-block;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0 100%,7% 50%,0 0);
+}
+.fea{
+    display: grid;
+grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+gap: 1.5rem;
+padding-top: 2rem;
+}
+.fea div{
+padding: 3rem 2rem;
+background: #fff;
+outline: var(--outline);
+outline-offset: -1rem;
+text-align: center;
+line-height: 3rem;
+box-shadow: var(--box-shadow);
+}
+.fea div:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+.fea div img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.fea div h3{
+font-size: 1.8rem;
+color: var(--black);
+}
+.fea div p{
+font-size: 1.2rem;
+color: var(--light-color);
+}
+.admin{
+    margin: 1rem 0;
+    padding: 1rem 0;
+    font-weight: 200;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: var(--border)
+}
+.admin:hover{
+    box-shadow: var(--box-shadow);
+outline: var(--outline);
+}
+.fott{
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(30rem,1fr));
+    gap:1.5rem;
+    border-bottom: var(--border);
+
+}
+.fott div{
+    display: flex;
+    gap: 0.7rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fott div h1{
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.fott div a{
+    color: var(--light-color);
+    font-size: 1.3rem;
+}
+.fott div a:hover{
+    padding-left: .8rem;
+}
+.fott div p{
+    color: var(--light-color);
+    font-size: 1.3rem;
+
+}
+footer h3{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+footer h3 span{
+    color: var(--orange);
+}
+footer h3:hover{
+    outline: var(--outline-hover);
+    color: var(--black);
+    box-shadow: var(--box-shadow);
+}
+footer h3:hover span{
+    color: var(--light-green);
+}
+@media(max-width:768px){
+.navbar{
+    display: none;
+}
+footer h3{
+    font-size: 1.5rem;
+}
+.fott div{
+    display: flex;
+    gap: 1.7rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fott{
+    border-bottom: var(--border);
+    gap: 5rem;
+}
+}
